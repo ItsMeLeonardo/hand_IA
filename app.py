@@ -72,6 +72,8 @@ with mp_hands.Hands(
                             mp_drawing_styles.get_default_hand_landmarks_style(),
                             mp_drawing_styles.get_default_hand_connections_style())
         cv2.imshow('Frame', frame)
+        #mostra fotogramas por segundos
+        
         if cv2.waitKey(1) & 0xFF == 27:
             break
 

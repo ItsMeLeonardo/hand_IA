@@ -136,7 +136,7 @@ def obtenerAngulos(results, width, height):
                     l17 = np.linalg.norm(p16 - p18)
                     l18 = np.linalg.norm(p16 - p17)
 
-                    # despejar y quitar determinaciones con numeradores menores al denominador
+                    # despejar y quitar indeterminaciones con numeradores menores al denominador
 
                     num_den1 = (l1**2 + l3**2 - l2**2) / (2 * l1 * l3)
 
