@@ -183,5 +183,7 @@ def obtenerAngulos(results, width, height):
                         angle6 = 0
 
                     angulosid = [angle1, angle2, angle3, angle4, angle5, angle6]
-        return angulosid
+
+                    pinky = [int(hand_landmarks.landmark[mp_hands.HandLandmark.PINKY_TIP].x * width), int(hand_landmarks.landmark[mp_hands.HandLandmark.PINKY_TIP].y * height)]
+        return [angulosid, pinky]
                     

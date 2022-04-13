@@ -3,6 +3,8 @@ import mediapipe as mp
 from Funciones.condicionales import condicionalesLetras
 from Funciones.normalizacionCords import obtenerAngulos
 
+lectura_actual = 0
+
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands
 mp_drawing_styles = mp.solutions.drawing_styles
@@ -30,7 +32,7 @@ with mp_hands.Hands(
         if results.multi_hand_landmarks is not None:
             # Accediendo a los puntos de referencia, de acuerdo a su nombre
                 
-                angulosid = obtenerAngulos(results, width, height)
+                angulosid = obtenerAngulos(results, width, height)[0]
 
                 dedos = []
                 # pulgar externo angle
@@ -56,7 +58,20 @@ with mp_hands.Hands(
                 TotalDedos = dedos.count(1)
                 condicionalesLetras(dedos, frame)
                 
-            
+                pinky = obtenerAngulos(results, width, height)[1]
+                pinkY=pinky[1] + pinky[0]   
+                resta = pinkY - lectura_actual
+                lectura_actual = pinkY
+                print(abs(resta), pinkY, lectura_actual)
+                
+                if dedos == [0, 0, 1, 0, 0, 0]:
+                    if abs(resta) > 30:
+                        print("jota en movimento")
+                        font = cv2.FONT_HERSHEY_SIMPLEX
+                        cv2.rectangle(frame, (0, 0), (100, 100), (255, 255, 255), -1)
+                        cv2.putText(frame, 'J', (20, 80), font, 3, (0, 0, 0), 2, cv2.LINE_AA)
+                        
+
                 #testing--------------------------------------
                 # print(dedos)
                 # print("meñique:", angle1, "anular:", angle2, "medio:", angle3,
