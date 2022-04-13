@@ -2,6 +2,7 @@ import mediapipe as mp
 from math import degrees, acos
 import numpy as np
 
+#actualizacion
 mp_hands = mp.solutions.hands
 
 def obtenerAngulos(results, width, height):
