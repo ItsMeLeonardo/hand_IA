@@ -22,7 +22,7 @@ pip install -r requirements.txt
 _Una vez instalado las librerias escribe en tu terminal en la ubicacion raiz del repositorio:_
 
 ```
-aplicación py.py
+py app.py
 ```
 
 ## Construido con 🛠️
