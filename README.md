@@ -13,7 +13,7 @@ _Luego de clonar el repositorio o haberlo descargado_
 _Abre la terminal, en el caso de Windows escribe:_
 
 ```
-pip install -r requisitos.txt
+pip install -r requirements.txt
 ```
 
 
