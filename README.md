@@ -23,6 +23,8 @@ _Una vez instalado las librerias escribe en tu terminal en la ubicacion raiz del
 
 ```
 py app.py
+python app.py
+python3 app.py
 ```
 
 ## Construido con 🛠️
