@@ -1,6 +1,7 @@
 # Traductor de señas
 
 _Traductor de lengua de señas al español basado en Python con Opencv y MedaiPipe_
+https://youtu.be/KKhuqK2S7Zs
 
 ### Requerimientos 🔧
 
