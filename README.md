@@ -2,6 +2,7 @@
 
 _Traductor de lengua de señas al español basado en Python con Opencv y MedaiPipe_
 https://youtu.be/KKhuqK2S7Zs
+![Captura desde 2022-09-18 13-48-28](https://user-images.githubusercontent.com/48532611/190923572-6ea58307-a96e-4214-ad10-5fcfd2de8b26.png)
 
 ### Requerimientos 🔧
 
