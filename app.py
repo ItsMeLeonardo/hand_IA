@@ -32,7 +32,7 @@ with mp_hands.Hands(
             angleId = getAngles(results, width, height)[0]
 
             fingers = []
-
+            # 0 = close && 1 = open
             if angleId[5] > 125:
                 fingers.append(1)
             else:
